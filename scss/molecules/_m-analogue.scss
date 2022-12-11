@@ -1,0 +1,28 @@
+.m-analogue {
+  display: none;
+  max-width: 420px;
+  max-height: 420px;
+  color: $color__white;
+
+  .s-analogue & {
+    display: block;
+  }
+}
+
+.m-analogue__hour,
+.m-analogue__minute,
+.m-analogue__second {
+  transform-origin: 50% 50%;
+}
+
+.m-analogue__hour {
+  animation: time_hours 43200s infinite linear;
+}
+
+.m-analogue__minute {
+  animation: time_minutes 3600s infinite linear;
+}
+
+.m-analogue__second {
+  animation: time_seconds 60s infinite linear;
+}

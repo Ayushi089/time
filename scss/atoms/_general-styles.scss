@@ -1,0 +1,29 @@
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+.svg-sprite {
+  position: absolute;
+  z-index: -1;
+  left: -1px;
+  top: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+
+

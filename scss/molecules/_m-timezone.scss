@@ -1,0 +1,103 @@
+.m-timezone {
+  color: $color__text--off;
+
+  //&.s-current {
+  //}
+
+  &.s-open {
+    color: $color__text;
+  }
+}
+
+.m-timezone__time,
+.m-timezone__name,
+.m-timezone__feels-like,
+.m-timezone__rain-chance {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  cursor: default;
+}
+
+.m-timezone__rain-chance,
+.m-timezone__time {
+  padding-left: 16px;
+}
+
+.m-timezone__time {
+  text-transform: uppercase;
+}
+
+.m-timezone__weather {
+  display: block;
+  min-height: 25px;
+  opacity: 1;
+  transition: opacity .33s linear;
+
+  .s-hide-weather &,
+  .m-timezone.s-loading & {
+    opacity: 0;
+  }
+}
+
+.m-timezone__emoji {
+  display: inline-block;
+  margin-right: 6px;
+
+  .m-timezone__rain-chance & {
+    margin-right: 2px;
+  }
+}
+
+@include breakpoint('xsmall') {
+  .m-timezone,
+  .m-timezone__weather {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .m-timezone__name,
+  .m-timezone__time,
+  .m-timezone__feels-like,
+  .m-timezone__rain-chance {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .m-timezone__time,
+  .m-timezone__rain-chance {
+    text-align: right;
+  }
+
+  .m-timezone__weather {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/*
+.m-timezone__feels-like--hot {
+  color: #ffbfbf;
+}
+
+.m-timezone__feels-like--really-hot {
+  color: red;
+}
+
+.m-timezone__feels-like--cold {
+  color: #bfbfff;
+}
+
+.m-timezone__emoji--windy {
+  transform: rotate(-40deg);
+}
+
+.m-timezone__feels-like--hot .m-timezone__emoji--sunny {
+  filter: hue-rotate(-10deg) saturate(5);
+}
+
+.m-timezone__feels-like--really-hot .m-timezone__emoji--sunny {
+  transform: scale(1.2);
+  filter: hue-rotate(-10deg) saturate(5);
+}
+*/

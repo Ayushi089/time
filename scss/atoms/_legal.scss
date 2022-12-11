@@ -1,0 +1,66 @@
+.legal {
+  display: block;
+  margin-top: 40px;
+  color: $color__text--off;
+  text-align: center;
+
+  @include breakpoint('medium+') {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .s-screensaver & {
+    display: none;
+  }
+}
+
+.legal br {
+
+  @include breakpoint('medium+') {
+    display: none;
+  }
+}
+
+
+.legal a {
+  color: inherit;
+
+  &:hover {
+    color: $color__text;
+  }
+}
+
+.legal span {
+  display: block;
+
+  @include breakpoint('medium+') {
+    display: inline;
+  }
+}
+
+.legal .legal__dash {
+  display: none;
+  transition: opacity .25s;
+
+  @include breakpoint('medium+') {
+    display: inline;
+  }
+}
+
+.legal .legal__a17  + .legal__dash {
+
+  .s-hide-weather & {
+    opacity: 0;
+  }
+}
+
+.legal__darksky {
+  transition: opacity .25s;
+
+  .s-hide-weather & {
+    opacity: 0;
+  }
+}

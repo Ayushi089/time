@@ -1,0 +1,53 @@
+.logo {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  top: 20px;
+  width: 63px;
+  height: 40px;
+  color: $color__white;
+
+  @include breakpoint('medium+') {
+    left: 50px;
+    top: calc(50% - 38px);
+    width: 111px;
+    height: 70px;
+  }
+
+  @include breakpoint('medium+', 'portrait') {
+    .s-analogue & {
+      top: auto;
+      bottom: 100px;
+    }
+  }
+
+  @include breakpoint('large+') {
+    top: calc(50% - 40px);
+    width: 127px;
+    height: 80px;
+  }
+
+  @include breakpoint('large+', 'portrait') {
+    .s-analogue & {
+      top: auto;
+      bottom: 100px;
+    }
+  }
+}
+
+.logo svg {
+  display: block;
+  width: 63px;
+  height: 40px;
+
+  @include breakpoint('medium+') {
+    width: 111px;
+    height: 70px;
+  }
+
+  @include breakpoint('large+') {
+    width: 127px;
+    height: 80px;
+  }
+}
